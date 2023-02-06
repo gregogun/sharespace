@@ -1,30 +1,32 @@
-export interface ContractState {
+export interface PostContractState {
   posts: Post[];
 }
 
 interface Post {
   id: number;
   creator: string;
-  idea: string;
+  postContent: string;
   votes: {
     addresses: string[];
     status: number;
   };
 }
 
-export interface ContractAction {
-  input: ContractInput;
+export interface PostContractAction {
+  input: PostContractInput;
   caller: string;
 }
 
-export interface ContractInput {
-  function: ContractFunction;
+export interface PostContractInput {
+  function: PostContractFunction;
   id: number;
-  post: string;
+  postContent: string;
 }
 
-export type ContractFunction = "createPost" | "readPost" | "appreciatePost";
+export type PostContractFunction = "createPost" | "readPost" | "appreciatePost";
 
 export type PostResult = Post;
 
-export type ContractResult = { state: ContractState } | { result: PostResult };
+export type PostContractResult =
+  | { state: PostContractState }
+  | { result: PostResult };
