@@ -1,5 +1,8 @@
 export interface PostContractState {
   posts: Post[];
+  canEvolve: boolean;
+  evolve: string | null;
+  owner: string;
 }
 
 export interface Post {
@@ -21,9 +24,10 @@ export interface PostContractInput {
   function: PostContractFunction;
   id: number;
   content: string;
+  value: string;
 }
 
-export type PostContractFunction = "createPost" | "readPost" | "appreciatePost";
+export type PostContractFunction = "createPost" | "readPost" | "evolve";
 
 export type PostResult = Post;
 

@@ -1,3 +1,4 @@
+import { evolve } from "./actions/evolve";
 import { readPost } from "./actions/read/readPost";
 import { createPost } from "./actions/write/createPost";
 import {
@@ -19,6 +20,8 @@ export function handle(
       return createPost(state, action);
     case "readPost":
       return readPost(state, action);
+    case "evolve":
+      return evolve(state, action);
     default:
       throw new ContractError(
         `No function supplied or function not recognised: "${input.function}"`
