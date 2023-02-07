@@ -2,10 +2,10 @@ export interface PostContractState {
   posts: Post[];
 }
 
-interface Post {
+export interface Post {
   id: number;
   creator: string;
-  postContent: string;
+  content: string;
   votes: {
     addresses: string[];
     status: number;
@@ -20,7 +20,7 @@ export interface PostContractAction {
 export interface PostContractInput {
   function: PostContractFunction;
   id: number;
-  postContent: string;
+  content: string;
 }
 
 export type PostContractFunction = "createPost" | "readPost" | "appreciatePost";
