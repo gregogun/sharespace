@@ -1,5 +1,6 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
+import { Box, Flex, Typography } from "@aura-ui/react";
+import { ConnectWallet } from "@/modules/ConnectWallet";
 
 export default function Home() {
   return (
@@ -10,72 +11,22 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>Stored permanently on Arweave ✨</p>
-        </div>
-
-        <div className={styles.center}>
-          <div className={styles.thirteen}>
-            <img src="thirteen.svg" alt="13" />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://arwiki.wiki/"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Wiki <span>-&gt;</span>
-            </h2>
-            <p>Find in-depth information about the Arweave protocol.</p>
-          </a>
-
-          <a
-            href="https://cookbook.arweave.dev/"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Cookbook <span>-&gt;</span>
-            </h2>
-            <p>Learn how to go from 0-1 with building Permaweb apps.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      <Flex justify="between" css={{ py: "$5", px: "$20" }} as="header">
+        <Typography
+          css={{
+            py: "$2",
+            px: "$4",
+            boxShadow: "0 0 0 1px $colors$slate12",
+            br: "$3",
+          }}
+          contrast="hiContrast"
+          size="4"
+          weight="6"
+        >
+          sharespace_
+        </Typography>
+        <ConnectWallet permissions={["ACCESS_ADDRESS"]} />
+      </Flex>
     </>
   );
 }
