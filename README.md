@@ -1,3 +1,12 @@
-# Share It
+# sharespace
 
-A permaweb app that allows individuals to share their ideas for permaweb apps and protocols, to which they can get those ideas stamped. The underlying protocol itself can show the verifiable origin of a protocol or application.
+A permaweb app that allows individuals to share their ideas and explorations.
+
+## Project Milestones
+
+- [ ] Users can create/post an idea
+- [ ] Users can view posts in a feed
+- [ ] Users can stamp an idea
+- [ ] Users can create/post a project/exploration
+- [ ] Users can link ideas to their implementations
+- [ ] Users can fork/extend ideas
