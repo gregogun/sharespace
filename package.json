@@ -27,6 +27,7 @@
     "arweave-wallet-ui": "0.0.2",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+    "formik": "2.2.9",
     "next": "12.3.0",
     "next-themes": "0.2.1",
     "react": "18.2.0",

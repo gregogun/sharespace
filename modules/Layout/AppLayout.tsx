@@ -15,7 +15,11 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
   return (
     <>
       <AppHeader />
-      <Grid css={{ px: "$20" }} gap="20" templateColumns="200px 1fr">
+      <Grid
+        css={{ px: "$20", justifyItems: "center", width: "90%" }}
+        gap="20"
+        templateColumns="200px 1fr"
+      >
         <Navigation />
         <Main>{children}</Main>
       </Grid>
