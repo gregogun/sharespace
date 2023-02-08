@@ -1,16 +1,17 @@
-import { WarpFactory } from "warp-contracts";
 import fs from "fs";
-import path from "path";
-
-const warp = WarpFactory.forMainnet();
 
 const jwk = await warp.arweave.wallets.generate();
-const walletAddress = await warp.arweave.wallets.jwkToAddress(jwk);
+const walletAddress = await warp.arweave.wallets.jwkToAddress(jwk)
+
+console.log(JSON.stringify(jwk));
+console.log(walletAddress);
 
 const contractSrc = fs.readFileSync("./dist/contract.js", "utf-8");
 
 const initialState = {
   posts: [],
+  canEvolve: true,
+  evolve: null
 };
 
 const { contractTxId } = await warp.deploy({

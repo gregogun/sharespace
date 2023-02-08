@@ -9,10 +9,6 @@ export interface Post {
   id: number;
   creator: string;
   content: string;
-  votes: {
-    addresses: string[];
-    status: number;
-  };
 }
 
 export interface PostContractAction {
