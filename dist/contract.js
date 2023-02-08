@@ -1,5 +1,18 @@
 "use strict";
 (() => {
+  // contracts/actions/evolve.ts
+  var evolve = (state, { input, caller }) => {
+    const { canEvolve, owner } = state;
+    if (!canEvolve) {
+      throw new ContractError("This contract cannot evolve");
+    }
+    if (owner !== caller) {
+      throw new ContractError("Only the owner can evolve a contract.");
+    }
+    state.evolve = input.value;
+    return { state };
+  };
+
   // contracts/actions/read/readPost.ts
   var readPost = (state, { input: { id } }) => {
     const post = state.posts.find((p) => p.id == id);
@@ -36,6 +49,8 @@
         return createPost(state, action);
       case "readPost":
         return readPost(state, action);
+      case "evolve":
+        return evolve(state, action);
       default:
         throw new ContractError(
           `No function supplied or function not recognised: "${input.function}"`

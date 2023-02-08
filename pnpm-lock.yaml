@@ -11,7 +11,7 @@ specifiers:
   '@types/react-dom': 18.0.10
   arconnect: 0.4.2
   arlocal: 1.1.60
-  arweave: 1.11.8
+  arweave: 1.12.4
   arweave-account: 1.3.4
   arweave-wallet-connector: 0.0.31
   arweave-wallet-ui: 0.0.2
@@ -39,7 +39,7 @@ dependencies:
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   arconnect: 0.4.2
-  arweave: 1.11.8
+  arweave: 1.12.4
   arweave-account: 1.3.4
   arweave-wallet-connector: 0.0.31_typescript@4.7.4
   arweave-wallet-ui: 0.0.2_zcb6pepknk5yjuovdg6o5jl5ky

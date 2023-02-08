@@ -1,6 +1,7 @@
 import Arweave from "arweave";
 import { ArweaveWebWallet } from "arweave-wallet-connector";
 import ArweaveAccount, { ArAccount } from "arweave-account";
+import { WarpFactory } from "warp-contracts";
 
 export const arweave = Arweave.init({
   host: "localhost",
@@ -11,6 +12,8 @@ export const arweave = Arweave.init({
 export const webWallet = new ArweaveWebWallet({
   name: "sharespace",
 });
+
+export const warp = WarpFactory.forMainnet();
 
 export const connect = () => {
   webWallet.setUrl("https://arweave.app");

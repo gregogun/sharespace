@@ -21,10 +21,6 @@ export const createPost = (
     id,
     creator: caller,
     content,
-    votes: {
-      addresses: [],
-      status: 0,
-    },
   });
 
   return { state };

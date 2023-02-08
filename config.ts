@@ -8,4 +8,7 @@ export const config = {
   boringAvatars: "https://source.boringavatars.com/marble",
   accountAvatarDefault:
     "https://hky34zdnsy3xyhltbpuy6plcqt33qmenxbabevfgyjdcdux444aa.arweave.net/OrG-ZG2WN3wdcwvpjz1ihPe4MI24QBJUpsJGIdL85wA",
+  postContract: {
+    id: "_tp1plO2tJHqV2QFxXjVQ6fjojI5AwD2cctjw1moOso",
+  },
 };
