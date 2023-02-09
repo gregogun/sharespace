@@ -25,6 +25,6 @@ export const AppHeader = () => (
     >
       sharespace_
     </Typography>
-    <ConnectWallet permissions={["ACCESS_ADDRESS"]} />
+    <ConnectWallet permissions={["ACCESS_ADDRESS", "ACCESS_ALL_ADDRESSES"]} />
   </Flex>
 );
