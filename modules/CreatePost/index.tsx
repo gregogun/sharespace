@@ -1,5 +1,5 @@
 import { useAuth } from "@/hooks/useAuth";
-import { writePostToContract } from "@/lib/post";
+import { deploy } from "@/lib/post";
 import { Textarea } from "@/ui/Textarea";
 import {
   Box,
@@ -30,7 +30,7 @@ const FormGroup = styled("div", {
 });
 
 interface PostFormValues {
-  name: string;
+  title: string;
   description: string;
 }
 
@@ -39,7 +39,7 @@ export const CreatePost = () => {
   const { walletAddress } = useAuth();
   const formik = useFormik<PostFormValues>({
     initialValues: {
-      name: "",
+      title: "",
       description: "",
     },
     validateOnBlur: false,
@@ -47,8 +47,8 @@ export const CreatePost = () => {
     validate: (values) => {
       const errors: FormikErrors<PostFormValues> = {};
 
-      if (values.name && values.name.length > 50) {
-        errors.name = "Name is too long";
+      if (values.title && values.title.length > 50) {
+        errors.title = "Name is too long";
       }
 
       if (values.description && values.description.length > 240) {
@@ -59,7 +59,12 @@ export const CreatePost = () => {
     },
     onSubmit: async (values, { setSubmitting }) => {
       console.log(values);
-      await writePostToContract(values.description)
+      const address = await window.arweaveWallet.getActiveAddress();
+      await deploy({
+        address,
+        title: values.title,
+        description: values.description,
+      })
         .then((res) => {
           console.log(res);
           setSubmitting(false);
@@ -87,15 +92,15 @@ export const CreatePost = () => {
           css={{
             fontSize: "$2",
           }}
-          name="name"
+          name="title"
           maxLength={50}
-          value={formik.values.name}
+          value={formik.values.title}
           onChange={formik.handleChange}
           variant="outline"
           placeholder="Name your idea..."
         />
-        {formik.errors.name && (
-          <FormErrorText>{formik.errors.name}</FormErrorText>
+        {formik.errors.title && (
+          <FormErrorText>{formik.errors.title}</FormErrorText>
         )}
       </FormGroup>
       <FormGroup>
