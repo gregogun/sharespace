@@ -1,9 +1,12 @@
-import { Box, Grid, styled } from "@aura-ui/react";
+import { Grid, styled } from "@aura-ui/react";
 import { AppHeader } from "./AppHeader";
 import { Navigation } from "./Navigation";
 
 const Main = styled("main", {
-  maxWidth: 500,
+  minWidth: 500,
+  width: "min-content",
+  minHeight: 500,
+  height: "min-content",
   mt: "$5",
 });
 
