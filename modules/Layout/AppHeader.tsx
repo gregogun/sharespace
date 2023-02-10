@@ -1,5 +1,5 @@
 import { Flex, Typography } from "@aura-ui/react";
-import { ConnectWallet } from "../ConnectWallet";
+import { ConnectWallet } from "../connectWallet";
 
 export const AppHeader = () => (
   <Flex
