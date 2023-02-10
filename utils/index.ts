@@ -1,5 +1,7 @@
+import { config } from "@/config";
 import { getAccount } from "@/lib";
 import { ArAccount } from "arweave-account";
+import { formatDistance } from "date-fns";
 
 interface AbbreviateAddressOptions {
   startChars?: number;
@@ -30,4 +32,21 @@ export const accountFromAddress = async (
   const userAccount = await getAccount(address);
 
   return userAccount;
+};
+
+export const getAccountAvatar = (
+  account: ArAccount | undefined,
+  avatarSize?: number
+) => {
+  const size = avatarSize ? avatarSize : 120;
+
+  return account?.profile.avatarURL === config.accountAvatarDefault
+    ? account?.profile.avatarURL
+    : `${config.boringAvatars}/${size}/${account?.addr}?square`;
+};
+
+export const timestampToTimeAgo = (unixTimestamp: number) => {
+  return formatDistance(new Date(unixTimestamp * 1000), new Date(), {
+    addSuffix: true,
+  });
 };

@@ -1,5 +1,7 @@
 // Profile
 
+import { ArAccount } from "arweave-account";
+
 interface ProfileLinks {
   discord?: string;
   github?: string;
@@ -29,4 +31,16 @@ export interface CtxProps {
   address: string;
   assetId?: string;
   atomicId?: string;
+}
+
+interface Creator {
+  address: string;
+  account: ArAccount | undefined;
+}
+
+export interface Post {
+  creator: Creator;
+  title: string | undefined;
+  description: string | undefined;
+  timestamp: number | undefined;
 }
