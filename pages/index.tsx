@@ -1,5 +1,5 @@
 import { Typography } from "@aura-ui/react";
-import { AppLayout } from "@/modules/Layout/AppLayout";
+import { AppLayout } from "@/modules/layout/AppLayout";
 import { Feed } from "@/modules/feed";
 
 export default function Home() {

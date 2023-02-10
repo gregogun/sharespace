@@ -1,5 +1,5 @@
-import { CreatePost } from "@/modules/CreatePost";
-import { AppLayout } from "@/modules/Layout/AppLayout";
+import { CreatePost } from "@/modules/createPost";
+import { AppLayout } from "@/modules/layout/AppLayout";
 import { Typography } from "@aura-ui/react";
 
 const Feed = () => {
