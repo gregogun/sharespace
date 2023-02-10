@@ -17,6 +17,7 @@ specifiers:
   arweave-graphql: 0.0.5
   arweave-wallet-connector: 0.0.31
   arweave-wallet-ui: 0.0.2
+  date-fns: 2.29.3
   esbuild: 0.17.6
   eslint: 8.33.0
   eslint-config-next: 13.1.6
@@ -47,6 +48,7 @@ dependencies:
   arweave-graphql: 0.0.5
   arweave-wallet-connector: 0.0.31_typescript@4.7.4
   arweave-wallet-ui: 0.0.2_zcb6pepknk5yjuovdg6o5jl5ky
+  date-fns: 2.29.3
   eslint: 8.33.0
   eslint-config-next: 13.1.6_l36yidrw337hwf2rtnamh77lgq
   formik: 2.2.9_react@18.2.0
@@ -4495,6 +4497,11 @@ packages:
 
   /damerau-levenshtein/1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
+    dev: false
+
+  /date-fns/2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
+    engines: {node: '>=0.11'}
     dev: false
 
   /debug/3.2.7:

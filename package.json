@@ -28,6 +28,7 @@
     "arweave-graphql": "0.0.5",
     "arweave-wallet-connector": "0.0.31",
     "arweave-wallet-ui": "0.0.2",
+    "date-fns": "2.29.3",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "formik": "2.2.9",
