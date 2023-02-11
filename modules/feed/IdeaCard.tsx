@@ -1,8 +1,7 @@
 import { Post } from "@/types";
-import { Button } from "@/ui/Button";
 import { Image } from "@/ui/Image";
 import { getAccountAvatar, timestampToTimeAgo } from "@/utils";
-import { Box, Flex, Typography } from "@aura-ui/react";
+import { Box, Flex, Typography, Button } from "@aura-ui/react";
 
 interface IdeaCardProps {
   post: Post;
@@ -12,7 +11,7 @@ export const IdeaCard = ({
   post: { creator, title, description, timestamp },
 }: IdeaCardProps) => {
   return (
-    <Box css={{ p: "$5", backgroundColor: "$slate2", br: "$3", zIndex: -1 }}>
+    <Box css={{ p: "$5", backgroundColor: "$slate2", br: "$3" }}>
       <Typography contrast="hiContrast" css={{ mb: "$1" }} size="5" weight="6">
         {title}
       </Typography>
@@ -20,7 +19,7 @@ export const IdeaCard = ({
         {description}
       </Typography>
       <Flex justify="end" align="center">
-        {/* <Button>Stamp</Button>s */}
+        <Button>Stamp</Button>
         <Flex gap="2" align="center">
           <Image
             css={{
