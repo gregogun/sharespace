@@ -12,7 +12,7 @@ export const IdeaCard = ({
   post: { creator, title, description, timestamp },
 }: IdeaCardProps) => {
   return (
-    <Box css={{ p: "$5", backgroundColor: "$slate2", br: "$3" }}>
+    <Box css={{ p: "$5", backgroundColor: "$slate2", br: "$3", zIndex: -1 }}>
       <Typography contrast="hiContrast" css={{ mb: "$1" }} size="5" weight="6">
         {title}
       </Typography>

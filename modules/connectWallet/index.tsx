@@ -13,8 +13,6 @@ import {
   Button,
   styled,
   CSS,
-  VariantProps,
-  ButtonProps,
 } from "@aura-ui/react";
 import { config } from "@/config";
 import { abbreviateAddress } from "@/utils";

@@ -6,6 +6,7 @@ import {
   Box,
   Dialog,
   DialogContent,
+  DialogOverlay,
   Flex,
   styled,
   Typography,
@@ -50,6 +51,11 @@ export const ProfileDialog = ({
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
+      <DialogOverlay
+        css={{
+          backdropFilter: "blur(1px)",
+        }}
+      />
       <DialogContent
         css={{
           maxWidth: 450,
