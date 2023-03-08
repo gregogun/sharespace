@@ -15,9 +15,10 @@
     "clean-build": "rm -rf out* dist"
   },
   "dependencies": {
-    "@aura-ui/react": "0.0.4",
+    "@aura-ui/react": "0.0.5-alpha.2",
     "@bundlr-network/client": "0.10.3",
     "@next/font": "13.1.6",
+    "@permaweb/stampjs": "https://arweave.net/Fj9A_JHVcTBz-9M36ZMqUbTHlQhOtMy_wYuoJVFDrFc",
     "@radix-ui/react-icons": "1.1.1",
     "arconnect": "0.4.2",
     "arweave": "1.12.4",
@@ -25,6 +26,7 @@
     "arweave-graphql": "0.0.5",
     "arweave-wallet-connector": "0.0.31",
     "arweave-wallet-ui": "0.0.2",
+    "arweave-wallet-ui-test": "0.0.9",
     "date-fns": "2.29.3",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",

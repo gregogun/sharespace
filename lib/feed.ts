@@ -1,6 +1,7 @@
 import { Post } from "@/types";
 import { accountFromAddress } from "@/utils";
 import arweaveGql, { Transaction } from "arweave-graphql";
+import { getStampCount } from "./stamps";
 
 export const getPosts = async () => {
   try {
@@ -30,6 +31,15 @@ const createPostInfo = async (node: Transaction): Promise<Post> => {
     (tag) => tag.name === "Description"
   )?.value;
   const timestamp = node.block?.timestamp;
+  const id = node.id;
+  const stamps = await getStampCount(id);
 
-  return { creator: { address, account }, title, description, timestamp };
+  return {
+    creator: { address, account },
+    title,
+    description,
+    timestamp,
+    id,
+    stamps,
+  };
 };

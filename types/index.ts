@@ -43,4 +43,6 @@ export interface Post {
   title: string | undefined;
   description: string | undefined;
   timestamp: number | undefined;
+  id: string;
+  stamps: any;
 }

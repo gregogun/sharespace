@@ -20,11 +20,7 @@ export const Feed = () => {
   };
 
   return (
-    <Flex
-      css={{ position: "relative", height: "100%" }}
-      direction="column"
-      gap="3"
-    >
+    <Flex css={{ height: "100%" }} direction="column" gap="3">
       {posts ? (
         <>
           {posts.map((post) => (
