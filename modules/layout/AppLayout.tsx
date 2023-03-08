@@ -1,4 +1,4 @@
-import { Grid, styled } from "@aura-ui/react";
+import { Center, Grid, styled } from "@aura-ui/react";
 import { AppHeader } from "./AppHeader";
 import { Navigation } from "./Navigation";
 
@@ -18,14 +18,10 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
   return (
     <>
       <AppHeader />
-      <Grid
-        css={{ px: "$20", justifyItems: "center", width: "90%" }}
-        gap="20"
-        templateColumns="200px 1fr"
-      >
-        <Navigation />
+      <Center>
+        {/* <Navigation /> */}
         <Main>{children}</Main>
-      </Grid>
+      </Center>
     </>
   );
 };

@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { darkTheme, globalCss } from "@aura-ui/react";
 import { ThemeProvider } from "next-themes";
 import { AuthProvider } from "@/hooks/useAuth";
+import { ConnectProvider } from "arweave-wallet-ui-test";
 
 const globalStyles = globalCss({
   "*, *::before, *::after": {
@@ -27,13 +28,15 @@ globalStyles();
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <AuthProvider>
-      <ThemeProvider
-        disableTransitionOnChange
-        attribute="class"
-        value={{ light: "light-theme", dark: darkTheme.toString() }}
-      >
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <ConnectProvider>
+        <ThemeProvider
+          disableTransitionOnChange
+          attribute="class"
+          value={{ light: "light-theme", dark: darkTheme.toString() }}
+        >
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </ConnectProvider>
     </AuthProvider>
   );
 }

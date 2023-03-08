@@ -148,6 +148,7 @@ export const CreatePost = () => {
           type="submit"
           variant="solid"
           colorScheme="blue"
+          size="3"
         >
           {formik.isSubmitting ? "Submitting..." : "Submit idea"}
         </Button>
